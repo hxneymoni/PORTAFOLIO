@@ -1,0 +1,296 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container-fluid {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Espacio entre los elementos */
+    top: 0;
+}
+
+.nav-item{
+    margin: 0 10px;
+    margin-top: 10px;
+}
+.nav-menu{
+    margin-right: 60px;
+}
+
+.navbar {
+    padding: 10px 20px;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.navbar-toggler {
+    border: none;
+    outline: none;
+}
+
+.navbar-toggler-icon {
+    color: white;
+}
+
+/* Ajustes para el contenedor del navbar */
+.navbar .container-fluid {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar {
+    background-color: #212529;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: white;
+    text-decoration: none;
+}
+
+/* Botón de menú tipo hamburguesa */
+.menu-toggle {
+    display: none;
+}
+
+.menu-icon {
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+
+/* Estilos del menú */
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #007bff;
+}
+
+
+.card-body{
+    text-align: center;
+}
+
+.col-md-4{
+    justify-content: center;
+}
+
+.col-md-4 img{
+ height: 80%;
+ width: 100%;
+}
+
+
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+img {
+    object-fit: cover;
+    height: 100%;
+    width: auto;
+}
+
+/* Ajustes para las tarjetas de proyectos */
+.project-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-card img {
+    object-fit: cover;
+    height: 200px; /* Ajusta esta altura según tus necesidades */
+    border-radius: 10px 10px 0 0;
+}
+
+.project-card .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.project-card .btn {
+    margin-top: auto;
+}
+
+.contact-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.contact-info i {
+    color: #ffffff  !important; /* Color de los iconos */
+    margin-right: 15px;
+}
+
+.contact-info a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+    color: #68affa;
+}
+
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+}
+
+.footer .container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en pantallas pequeñas */
+}
+
+.footer .contact-item {
+    margin-bottom: 10px;
+}
+
+.footer a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: #007bff;
+}
+
+@media (max-width: 768px) {
+    .footer .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .menu-icon {
+        display: block;
+    }
+    
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        background-color: #212529;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        padding: 20px 0;
+        border-top: 1px solid #444;
+        z-index: 100;
+    }
+
+    /* Mostrar el menú al hacer clic en el botón hamburguesa */
+    .menu-toggle:checked + .menu-icon + .nav-menu {
+        display: flex;
+    }
+
+    .nav-item {
+        margin-bottom: 15px;
+    }
+}
+
+/* --- Media Queries --- */
+
+/* Para pantallas pequeñas (teléfonos) */
+@media (max-width: 576px) {
+    .vh-90 {
+        height: auto;
+        padding: 20px;
+    }
+
+    .navbar .container-fluid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar .d-flex {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        max-width: 100%;
+    }
+
+    .project-card {
+        margin-bottom: 20px;
+    }
+
+    .project-card img {
+        height: 150px;
+    }
+
+    .footer {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* Para pantallas medianas (tabletas) */
+@media (max-width: 768px) {
+    .navbar .container-fluid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar .d-flex {
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .card {
+        max-width: 90%;
+    }
+
+    .project-card img {
+        height: 180px;
+    }
+}
+
+/* Para pantallas grandes (laptops y desktops) */
+@media (min-width: 992px) {
+    .footer {
+        justify-content: space-between;
+    }
+}
+
